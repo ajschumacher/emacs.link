@@ -3,17 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Get Emacs</title>
-    <style>
-     html {
-       background-image: url(gnus.jpg);
-       background-color: #ABB2BC;
-       background-position: center bottom;
-       background-size: 100% auto;
-       min-height:100%;
-       background-attachment:scroll;
-       background-repeat:no-repeat;
-     }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>Get Emacs</h1>
@@ -29,26 +19,7 @@
     <p>
       Linux/Unix: "apt-get install emacs", run "emacs"
     </p>
-    <script type="text/javascript">
-     var html = document.getElementsByTagName('html')[0];
-     var htmlStyle = window.getComputedStyle(html);
-     var body = document.getElementsByTagName('body')[0];
-     var bodyStyle = window.getComputedStyle(body);
-     var niceSize = function () {
-       var width = parseInt(htmlStyle.getPropertyValue("width")
-                                     .replace('px', ''));
-       var contentHeight = parseInt(bodyStyle.getPropertyValue("height")
-                                             .replace('px', ''));
-       var windowHeight = window.innerHeight;
-       // background image is 1704 wide by 2416 tall
-       // and tree part is about 876 tall
-       var treeHeight = Math.ceil(width * 876 / 1704);
-       var necessaryHeight = contentHeight + treeHeight;
-       html.style.minHeight = Math.max(windowHeight, necessaryHeight) + "px";
-     };
-     niceSize();
-     window.addEventListener("resize", niceSize);
-    </script>
+    <script src="script.js"></script>
 <!-- Google Analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

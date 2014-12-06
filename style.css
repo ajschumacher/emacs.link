@@ -1,0 +1,9 @@
+html {
+    background-image: url(gnus.jpg);
+    background-color: #abb2bc;
+    background-position: center bottom;
+    background-size: 100% auto;
+    min-height:100%;
+    background-attachment:scroll;
+    background-repeat:no-repeat;
+}
