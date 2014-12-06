@@ -3,6 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>emacs.link</title>
+    <style>
+     html {
+       background-image: url(gnus.jpg);
+       background-color: #ABB2BC;
+       background-position: center bottom;
+       background-size: 100% auto;
+       min-height:100%;
+       background-attachment:scroll;
+       background-repeat:no-repeat;
+     }
+    </style>
   </head>
   <body>
     <h1>emacs.link</h1>
@@ -18,5 +29,22 @@
     <p>
       Linux/Unix: "apt-get install emacs", run "emacs"
     </p>
+    <script type="text/javascript">
+     var niceSize = function () {
+       var html = document.getElementsByTagName('html')[0];
+       var style = window.getComputedStyle(html);
+       var width = parseInt(style.getPropertyValue("width").slice(0, -2));
+       var height = window.innerHeight;
+       // var body = document.getElementsByTagName('body')[0];
+       // depends on background image being 1704 wide by 2416 tall
+       html.style.minHeight = Math.max(height,
+                                       Math.min(800,
+                                                Math.ceil(width * 2416 / 1704))) +
+                              "px";
+       // the 800 should be the sum of tree height and content height~
+     };
+     niceSize();
+     window.addEventListener("resize", niceSize);
+    </script>
   </body>
 </html>
