@@ -45,7 +45,9 @@ var is = function(thing) {
   return app.indexOf(thing) != -1;
 };
 
-if (is("win") && !is("mobile")) {
+if (is("phone") || is("tablet") || is("mobile")) {
+  only("mobile");
+} else if (is("win")) {
   only("windows");
 } else if (is("mac")) {
   only("mac");
