@@ -10,3 +10,40 @@ html {
   background-attachment:scroll;
   background-repeat:no-repeat;
 }
+
+body {
+  width: 30em;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.download {
+  padding: 0.5em;
+  margin: 0.5em;
+  background: #423A38;
+  color: #abb2bc;
+  font-size: 2em;
+  display: block;
+  border: 0.1em solid #423A38;;
+}
+
+a.download:hover {
+  background: transparent;
+  color: #423A38;
+}
+
+span.action {
+  display: block;
+  border: 0.1em solid;
+  font-size: 2em;
+  padding: 0.5em;
+  margin: 0.5em;
+}
