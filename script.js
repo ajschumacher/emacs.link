@@ -1,24 +1,3 @@
-var show = function(id) {
-  var item = document.getElementById(id);
-  item.style.display = "block";
-};
-
-var is = function(thing) {
-  app = navigator.appVersion.toLowerCase();
-  thing = thing.toLowerCase();
-  return app.indexOf(thing) != -1;
-};
-
-if (is("win") && !is("mobile")) {
-  show("windows");
-} else if (is("mac")) {
-  show("mac");
-} else if (is("X11") || is("linux")) {
-  show("linux");
-} else {
-  show("mobile");
-}
-
 var html = document.getElementsByTagName('html')[0];
 var htmlStyle = window.getComputedStyle(html);
 var body = document.getElementsByTagName('body')[0];
@@ -35,8 +14,42 @@ var niceSize = function () {
   var necessaryHeight = contentHeight + treeHeight;
   html.style.minHeight = Math.max(windowHeight, necessaryHeight) + "px";
 };
-niceSize();
 window.addEventListener("resize", niceSize);
+
+var show = function(id) {
+  var item = document.getElementById(id);
+  item.style.display = "block";
+};
+
+var hide = function(id) {
+  var item = document.getElementById(id);
+  item.style.display = "none";
+};
+
+var only = function(id) {
+  hide("mobile");
+  hide("windows");
+  hide("mac");
+  hide("linux");
+  show(id);
+  niceSize();
+};
+
+var is = function(thing) {
+  app = navigator.appVersion.toLowerCase();
+  thing = thing.toLowerCase();
+  return app.indexOf(thing) != -1;
+};
+
+if (is("win") && !is("mobile")) {
+  only("windows");
+} else if (is("mac")) {
+  only("mac");
+} else if (is("X11") || is("linux")) {
+  only("linux");
+} else {
+  only("mobile");
+}
 
 // temporary toy logging thing
 var log = function(message) {
