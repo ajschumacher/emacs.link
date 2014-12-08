@@ -1,11 +1,11 @@
 html {
-    color: #423A38;
-    font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
-    background-image: url(gnus.jpg);
-    background-color: #abb2bc;
-    background-position: center bottom;
-    background-size: 100% auto;
-    min-height:100%;
-    background-attachment:scroll;
-    background-repeat:no-repeat;
+  color: #423A38;
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+  background-image: url(gnus.jpg);
+  background-color: #abb2bc;
+  background-position: center bottom;
+  background-size: 100% auto;
+  min-height:100%;
+  background-attachment:scroll;
+  background-repeat:no-repeat;
 }
