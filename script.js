@@ -16,3 +16,10 @@ var niceSize = function () {
 };
 niceSize();
 window.addEventListener("resize", niceSize);
+
+// temporary toy logging thing
+var log = function(message) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("POST", "http://rogs-on-rails.herokuapp.com/", true);
+  xmlhttp.send(message);
+}
