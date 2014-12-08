@@ -47,3 +47,7 @@ span.action {
   padding: 0.5em;
   margin: 0.5em;
 }
+
+#mobile, #windows, #mac, #linux {
+  display: none;
+}

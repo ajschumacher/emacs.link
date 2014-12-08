@@ -1,3 +1,24 @@
+var show = function(id) {
+  var item = document.getElementById(id);
+  item.style.display = "block";
+};
+
+var is = function(thing) {
+  app = navigator.appVersion.toLowerCase();
+  thing = thing.toLowerCase();
+  return app.indexOf(thing) != -1;
+};
+
+if (is("win") && !is("mobile")) {
+  show("windows");
+} else if (is("mac")) {
+  show("mac");
+} else if (is("X11") || is("linux")) {
+  show("linux");
+} else {
+  show("mobile");
+}
+
 var html = document.getElementsByTagName('html')[0];
 var htmlStyle = window.getComputedStyle(html);
 var body = document.getElementsByTagName('body')[0];
@@ -22,4 +43,4 @@ var log = function(message) {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("POST", "http://rogs-on-rails.herokuapp.com/", true);
   xmlhttp.send(message);
-}
+};
