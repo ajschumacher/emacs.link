@@ -12,17 +12,21 @@ html {
 }
 
 body {
+  padding-top: 2em;
   width: 30em;
   margin: auto;
   text-align: center;
+  padding-bottom: 1em;
 }
 
 h1 {
   font-size: 3em;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
+  color: #432A38;
 }
 
 a.download {

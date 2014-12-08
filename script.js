@@ -1,12 +1,16 @@
+var pxToInt = function(text) {
+  return parseInt(text.replace('px', ''));
+};
+
 var html = document.getElementsByTagName('html')[0];
 var htmlStyle = window.getComputedStyle(html);
 var body = document.getElementsByTagName('body')[0];
 var bodyStyle = window.getComputedStyle(body);
 var niceSize = function () {
-  var width = parseInt(htmlStyle.getPropertyValue("width")
-                       .replace('px', ''));
-  var contentHeight = parseInt(bodyStyle.getPropertyValue("height")
-                               .replace('px', ''));
+  var width = pxToInt(htmlStyle.getPropertyValue("width"));
+  var contentHeight = pxToInt(bodyStyle.getPropertyValue("padding-top")) +
+      pxToInt(bodyStyle.getPropertyValue("height")) +
+      pxToInt(bodyStyle.getPropertyValue("padding-bottom"));
   var windowHeight = window.innerHeight;
   // background image is 1704 wide by 2416 tall
   // and tree part is about 876 tall
