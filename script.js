@@ -63,3 +63,13 @@ var log = function(message) {
   xmlhttp.open("POST", "http://rogs-on-rails.herokuapp.com/", true);
   xmlhttp.send(message);
 };
+
+var windows_download = document.getElementById("windows_download");
+windows_download.addEventListener("click", function () {
+  log("emacs.link: windows_download");
+});
+
+var mac_download = document.getElementById("mac_download");
+mac_download.addEventListener("click", function () {
+  log("emacs.link: mac_download");
+});
